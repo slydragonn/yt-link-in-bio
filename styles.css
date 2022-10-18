@@ -1,0 +1,126 @@
+:root {
+  --title-color: #181818;
+  --text-color: #383838;
+  --bg-color: #ffd000;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  min-height: calc(100vh - 40px);
+  padding: 20px;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid var(--title-color);
+  object-fit: cover;
+}
+
+.profile-name {
+  margin-top: 10px;
+  font-size: 24px;
+  color: var(--title-color);
+}
+
+.summary {
+  color: var(--text-color);
+  font-weight: 100;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.about {
+  display: flex;
+  margin-top: 10px;
+}
+
+.about__title {
+  color: var(--title-color);
+  font-weight: 600;
+}
+.about__list {
+  display: flex;
+  margin-left: 10px;
+  list-style: none;
+  font-weight: 100;
+}
+
+.about__list > li {
+  margin-right: 10px;
+}
+
+.about__list > li > a {
+  color: var(--text-color);
+  transition: all .3s;
+}
+
+.about__list > li:hover > a {
+  color: rgb(240, 102, 97);
+}
+
+.list-links {
+  margin-top: 40px;
+  list-style: none;
+}
+
+.list-links > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 50px;
+  margin-bottom: 30px;
+  border: 3px solid var(--title-color);
+  box-shadow: 5px 5px var(--title-color);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.list-links > li:nth-child(1) {
+  background-color: #a97df0;
+}
+.list-links > li:nth-child(2) {
+  background-color: #61ebf0;
+}
+.list-links > li:nth-child(3) {
+  background-color: #f06661;
+}
+.list-links > li:nth-child(4) {
+  background-color: #8ef061;
+}
+
+.list-links > li > a {
+  text-decoration: none;
+  color: var(--title-color);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.list-links > li:hover {
+  transform: translate(-5px, -5px);
+}
+
+@media screen and (max-width: 300px) {
+  .list-links {
+    width: 100%;
+  }
+  .list-links > li {
+    width: 100%;
+  }
+}
